@@ -21,3 +21,17 @@ data["fragility_score"] = (
 data["fragility_score"] = data["fragility_score"].round(2)
 
 print((data["fragility_score"] * 100).round(2).head())
+# =============================
+# Risk Category
+# =============================
+
+if fragility_score <= 20:
+    risk_level = "🟢 Very Stable"
+elif fragility_score <= 40:
+    risk_level = "🟢 Stable"
+elif fragility_score <= 60:
+    risk_level = "🟡 Slightly Risky"
+elif fragility_score <= 80:
+    risk_level = "🟠 Moderately Risky"
+else:
+    risk_level = "🔴 High Risk"
